@@ -1,0 +1,54 @@
+{
+  "summary": "路由页把「已开始回答、随后中断」的请求（状态码 200 却带 error/fail）统一按失败处理：请求行不再显示成绿色成功、点「Agent 收到的错误」统计能选中它、swap/routed 标记只在真正应答的尝试上出现，页面和 Agents 面板的重放动画也把这类尝试回放为失败。",
+  "scenes": [
+    {
+      "title": "请求行与「错误」统计的判定",
+      "shots": [
+        {
+          "file": "01-routing-overview.png",
+          "caption": "路由页：舞台、统计与最近一个请求的过程",
+          "width": 2560
+        },
+        {
+          "file": "02-routing-requests.png",
+          "caption": "请求列表：每行的状态点、来源与「供应商 · 模型」",
+          "width": 1328
+        },
+        {
+          "file": "03-routing-errors-stat.png",
+          "caption": "点击统计后的统计条与请求列表",
+          "width": 1120
+        },
+        {
+          "file": "04-routing-request-story.png",
+          "caption": "该请求的路由过程：每一步是否算应答",
+          "width": 2524
+        }
+      ]
+    },
+    {
+      "title": "重放动画",
+      "shots": [
+        {
+          "file": "05-routing-replay-flight.png",
+          "caption": "重放进行中：请求从来源流向网关与账号",
+          "width": 2524
+        },
+        {
+          "file": "06-routing-replay-done.png",
+          "caption": "重放结束后的舞台与账号点",
+          "width": 2524
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里只有 DeepSeek、且已有请求都是正常完成的 200 应答，没有「已开始回答随后中断」的请求，也没有改道（swap/routed）的尝试，所以行变红、统计点击后选中失败请求、失败星点在重放中回退这些具体状态都拍不到；录屏只能展示这些判定发生的位置（请求列表、错误统计、请求的过程、重放动画）。",
+  "interactive": true,
+  "pages": 1
+}

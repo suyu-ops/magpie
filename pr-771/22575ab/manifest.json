@@ -1,0 +1,47 @@
+{
+  "summary": "用量「请求」标签和路由页的筛选行各多出一个「调用用途」下拉：同义的 kind 合并成一项、未知 kind 保留原名、没有 kind 的记录显示为「未标记」，选中后过滤请求列表（用量端还作用于合计、图表与 CSV 导出）；路由页筛选行改为可换行，窄窗口下也能放下。",
+  "scenes": [
+    {
+      "title": "用量：按调用用途筛选请求",
+      "shots": [
+        {
+          "file": "01-usage-requests-toolbar.png",
+          "caption": "请求列表上方的筛选行",
+          "width": 2560
+        },
+        {
+          "file": "02-usage-requests-filters.png",
+          "caption": "请求列表上方的筛选栏（本沙盒的调用都没有记录用途）",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "路由：按调用用途筛选请求",
+      "shots": [
+        {
+          "file": "03-routing-filters.png",
+          "caption": "路由页请求列表的筛选行",
+          "width": 1328
+        },
+        {
+          "file": "04-routing-requests.png",
+          "caption": "路由页筛选行下方的请求列表",
+          "width": 1328
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "用量：按调用用途筛选请求 · click #ledPurpose: nothing visible matches #ledPurpose (1 in the page)",
+    "路由：按调用用途筛选请求 · click #rtPurpose: nothing visible matches #rtPurpose (1 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里经网关的请求都是 curl 发的、没有记录 kind，所以用途下拉里预计只有「全部用途」和「未标记」两项：别名合并（thread_title / guardian / memory_consolidation 等）、未知 kind 原样显示、按用途变化的合计/图表/CSV 内容、带用途筛选时的跨页请求跳转，都无法在这里呈现；路由页在 560px 窄窗口下筛选行换行的布局也需要缩小窗口才能看到。",
+  "interactive": true,
+  "pages": 2
+}

@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#772 界面预览 · 0637d6b</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#772 界面预览</h1><p class="m">commit 0637d6b · <a href="https://github.com/yetone/magpie/pull/772">回到 PR</a> · 路由页把「已开始回答、随后中断」的请求（状态码 200 却带 error/fail）统一按失败处理：请求行不再显示成绿色成功、点「Agent 收到的错误」统计能选中它、swap/routed 标记只在真正应答的尝试上出现，页面和 Agents 面板的重放动画也把这类尝试回放为失败。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-routing-overview.png" alt="路由页：舞台、统计与最近一个请求的过程"><figcaption>请求行与「错误」统计的判定 · 路由页：舞台、统计与最近一个请求的过程</figcaption></figure>
+<figure><img src="02-routing-requests.png" alt="请求列表：每行的状态点、来源与「供应商 · 模型」"><figcaption>请求行与「错误」统计的判定 · 请求列表：每行的状态点、来源与「供应商 · 模型」</figcaption></figure>
+<figure><img src="03-routing-errors-stat.png" alt="点击统计后的统计条与请求列表"><figcaption>请求行与「错误」统计的判定 · 点击统计后的统计条与请求列表</figcaption></figure>
+<figure><img src="04-routing-request-story.png" alt="该请求的路由过程：每一步是否算应答"><figcaption>请求行与「错误」统计的判定 · 该请求的路由过程：每一步是否算应答</figcaption></figure>
+<figure><img src="05-routing-replay-flight.png" alt="重放进行中：请求从来源流向网关与账号"><figcaption>重放动画 · 重放进行中：请求从来源流向网关与账号</figcaption></figure>
+<figure><img src="06-routing-replay-done.png" alt="重放结束后的舞台与账号点"><figcaption>重放动画 · 重放结束后的舞台与账号点</figcaption></figure>
+</main></html>
